@@ -5,6 +5,8 @@ const app = express();
 const path = require('path');
 //const dotenv = require("dotenv");
 
+const cors = require('cors');
+
 //const APP_BASE_URL = process.env.APP_BASE_URL;
 const MONGO_CONNECTION_URL = process.env.MONGO_CONNECTION_URL;
 const PORT = process.env.PORT || 4000;
@@ -12,8 +14,15 @@ const PORT = process.env.PORT || 4000;
 //connect Database
 const connectDB = require('./config/db');
 connectDB();
-app.use(express.static('public'));
 
+//cors 
+const corsOptions = {
+    origin: process.env.ALLOWED_CLIENTS.split(',')
+    // ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:4000']
+  }
+  
+app.use(express.static('public'));
+app.use(cors(corsOptions));
 //template engine
 app.use(express.json());
 
