@@ -1,0 +1,34 @@
+{
+  "name": "file-sharing",
+  "version": "1.0.0",
+  "description": "\"sharing file online up to 100mb\"",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "server": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amreshnit/Amresharefile.git"
+  },
+  "author": "amresh kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amreshnit/Amresharefile/issues"
+  },
+  "homepage": "https://github.com/Amreshnit/Amresharefile#readme",
+  "dependencies": {
+    "dotenv": "^14.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.1.7",
+    "multer": "^1.4.4",
+    "node": "^17.4.0",
+    "nodemailer": "^6.7.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
